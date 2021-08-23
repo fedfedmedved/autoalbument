@@ -75,8 +75,8 @@ classification_model:
 
 data:
   dataset:
-    _target_: dataset.Cifar10SearchDataset
-    root: ~/data/cifar10
+    _target_: dataset.MNISTSearchDataset
+    root: ~/data/mnist
     train: true
     download: true
   # Class for the PyTorch Dataset and arguments to it. AutoAlbument will create an object of this class using
