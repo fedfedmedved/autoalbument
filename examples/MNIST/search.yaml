@@ -177,7 +177,7 @@ trainer:
   # Configuration for PyTorch Lightning Trainer. You can read more about Trainer and its arguments at
   # https://pytorch-lightning.readthedocs.io/en/stable/common/trainer.html.
 
-  max_epochs: 40
+  max_epochs: 10
   # Number of epochs to search for augmentation parameters.
   # More detailed description - https://pytorch-lightning.readthedocs.io/en/stable/common/trainer.html#max-epochs
 
@@ -185,6 +185,6 @@ trainer:
   # If true enables cudnn.benchmark.
   # More detailed description - https://pytorch-lightning.readthedocs.io/en/stable/common/trainer.html#benchmark
 
-  gpus: 0
+  gpus: 1
   # Number of GPUs to train on. Set to `0` or None` to use CPU for training.
   # More detailed description - https://pytorch-lightning.readthedocs.io/en/stable/common/trainer.html#gpus

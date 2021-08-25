@@ -1,5 +1,6 @@
 import cv2
 import torchvision
+import numpy as np
 
 cv2.setNumThreads(0)
 cv2.ocl.setUseOpenCL(False)
@@ -13,7 +14,8 @@ class MNISTSearchDataset(torchvision.datasets.MNIST):
         image, label = self.data[index], self.targets[index]
 
         if self.transform is not None:
-            transformed = self.transform(image=image)
+            im_3d = np.repeat(image[:, :, np.newaxis], 3, 2)
+            transformed = self.transform(image=im_3d.numpy())
             image = transformed["image"]
 
         return image, label
